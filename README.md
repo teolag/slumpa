@@ -42,33 +42,48 @@ let b = slumpa.int(5, 20); // 5 <= b <= 20
 let c = slumpa.int(50, 10); // 10 <= c <= 50
 ```
 
-### Generate random decimal between a and b (min default=0)
+### float([a=1], [b=0])
+Generate random decimal between a and b (default min=0, max=1)
 ```javascript
-slumpa.float(a, [b=0])
+let a = slumpa.float(); // 0 < a < 1
+let b = slumpa.float(5); // 0 < b < 5
+let c = slumpa.float(20, 10); // 10 < c < 20
 ```
 
-### Generate random boolean (probability default = 0.5)
+### bool([probability])
+Generate random boolean. Set probability to change the chance of true. (default = 1/2)
 ```javascript
-slumpa.bool([probability])
+slumpa.bool(); // 50% true, 50% false
+slumpa.bool(1/4); // 25% true, 75% false
 ```
 
-### Return random item from array
+### item(arr)
+Return a random value from an array
 ```javascript
-slumpa.item(arr)
+slumpa.item(["apelsin", "äpple", "banan"]); // äpple 
+slumpa.item(["apelsin", "äpple", "banan"]); // banan 
 ```
 
-### Return random items from array, optional putback to allow multiple of same
+### items(arr, n, [putback=false])
+Return n random items from array, optional putback to allow multiple of same
 ```javascript
-slumpa.items(arr, n, [putback=false])
+slumpa.items([1, 2, 3, 4], 2); // [3, 1]
+slumpa.items([1, 2, 3], 5, true); // [3, 2, 1, 3, 1]
 ```
 
-### Return the same array shuffled
+### shuffle(arr)
+Shuffle an array and return the same one
 ```javascript
-slumpa.shuffle(arr)
+let arr = [1, 2, 3, 4]; 
+let a = slumpa.shuffle(arr); // [3, 2, 4, 1]
+arr; // [3, 2, 4, 1]
 ```
 
-### Return a shuffled copy of an array
+### shuffleCopy(arr)
+Return a shuffled copy of an array
 ```javascript
-slumpa.shuffleCopy(arr)
+let arr = [1, 2, 3, 4]; 
+let a = slumpa.shuffleCopy(arr); // [3, 2, 4, 1]
+arr; // [1, 2, 3, 4]
 ```
 
