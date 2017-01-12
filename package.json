@@ -1,0 +1,25 @@
+{
+  "name": "slumpa",
+  "version": "0.1.0",
+  "description": "A small randomizing library. Uses a seed to generate random ints, floats, arrays and more.",
+  "main": "slumpa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teolag/Slumpa.git"
+  },
+  "keywords": [
+    "random",
+    "slump",
+    "seed",
+    "putback"
+  ],
+  "author": "Teodor Lagerqvist",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teolag/Slumpa/issues"
+  },
+  "homepage": "https://github.com/teolag/Slumpa#readme"
+}
