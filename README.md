@@ -1,13 +1,13 @@
 # Slumpa
 
-### Set the seed value
+### Set the initial seed value
 ```
 Slumpa.setSeed(seed);
 ```
 
-### Get the seed value
+### Get the initial seed
 ```
-Slumpa.setSeed(seed);
+Slumpa.getSeed();
 ```
 
 ### Generate random integer between a and b (min default=0)
