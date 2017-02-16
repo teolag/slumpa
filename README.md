@@ -3,10 +3,10 @@
 ## Installation
 
 ### As a node module
-```
+```bash
 npm install --save slumpa
 ``` 
-```
+```javascript
 const slumpa = require("slumpa");
 let randomInt = slumpa.int(0,100);
 ```
