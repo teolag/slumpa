@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { Slumpa } from '../src/slumpa'
+import { Slumpa } from '../src'
 
 describe('Slumpa', () => {
   context('Constructor and setSeed', () => {
@@ -30,12 +30,12 @@ describe('Slumpa', () => {
       ])
       for (let i = 0; i < iterations; i++) {
         const res = s.integer(6, 8)
-        hits.set(res, hits.get(res)! + 1)
+        hits.set(res, (hits.get(res) ?? 0) + 1)
         expect([6, 7, 8]).to.include(res)
       }
-      expect(hits.get(6)! / iterations).to.be.approximately(0.333, 0.1)
-      expect(hits.get(7)! / iterations).to.be.approximately(0.333, 0.1)
-      expect(hits.get(8)! / iterations).to.be.approximately(0.333, 0.1)
+      expect((hits.get(6) ?? 0) / iterations).to.be.approximately(0.333, 0.1)
+      expect((hits.get(7) ?? 0) / iterations).to.be.approximately(0.333, 0.1)
+      expect((hits.get(8) ?? 0) / iterations).to.be.approximately(0.333, 0.1)
     })
   })
 
