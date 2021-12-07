@@ -1,14 +1,27 @@
 {
   "name": "slumpa",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A small randomizing library. Uses a seed to generate random ints, floats, arrays and more.",
   "main": "slumpa.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon",
+    "test": "TS_NODE_PROJECT=./tsconfig.json mocha -r ts-node/register/transpile-only --extension ts './test/**/*.test.ts'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.2.21",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teolag/Slumpa.git"
+    "url": "git+https://github.com/teolag/slumpa.git"
   },
   "keywords": [
     "random",
@@ -19,7 +32,7 @@
   "author": "Teodor Lagerqvist",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/teolag/Slumpa/issues"
+    "url": "https://github.com/teolag/slumpa/issues"
   },
-  "homepage": "https://github.com/teolag/Slumpa#readme"
+  "homepage": "https://github.com/teolag/slumpa#readme"
 }
