@@ -1,3 +1,12 @@
+export type StringSettings =
+  | {
+      useUppercase?: boolean
+      useLowercase?: boolean
+      useNumbers?: boolean
+      useSpecials?: boolean
+    }
+  | undefined
+
 export class Slumpa {
   #initialSeed: number | string
   #seed: number
@@ -66,14 +75,18 @@ export class Slumpa {
     return this.#knuthShuffle(array)
   }
 
-  public string(length: number, { useUppercase = true, useLowercase = true, useNumbers = true, useSpecials = true } = {}): string {
+  public string(length: number, settings?: StringSettings): string {
     const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     const numbers = '0123456789'
     const specials = '~`!@#$%^&*()_-+={[}]|:;"\'<,>.?/'
     const uppers = letters.toUpperCase()
     const lowers = letters.toLowerCase()
 
-    const chars: string = (useUppercase ? uppers : '') + (useLowercase ? lowers : '') + (useNumbers ? numbers : '') + (useSpecials ? specials : '')
+    const chars: string =
+      (!settings || settings.useUppercase ? uppers : '') +
+      (!settings || settings.useLowercase ? lowers : '') +
+      (!settings || settings.useNumbers ? numbers : '') +
+      (!settings || settings.useSpecials ? specials : '')
     return this.items(length, chars.split(''), true).join('')
   }
 
