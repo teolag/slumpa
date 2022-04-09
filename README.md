@@ -1,5 +1,9 @@
 # Slumpa
 
+## Demo
+
+https://teolag.github.io/slumpa/
+
 ## Usage
 
-See example file under /examples
+Coming soon....

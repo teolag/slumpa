@@ -43,7 +43,7 @@
   "bugs": {
     "url": "https://github.com/teolag/slumpa/issues"
   },
-  "homepage": "https://github.com/teolag/slumpa#readme",
+  "homepage": "https://teolag.github.io/slumpa/",
   "files": [
     "/dist"
   ]
