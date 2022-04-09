@@ -20,10 +20,10 @@
           <div class="usage">
             <div>
               Randomize integer between
-              <input type="number" class="inline-input input-size-3" name="min" value="3" />and
+              <input type="number" class="inline-input input-size-3" name="min" value="3" /> and
               <input type="number" class="inline-input input-size-3" name="max" value="70" />
             </div>
-            <textarea readonly rows="1" name="code"></textarea>
+            <textarea readonly rows="1" class="code" name="code"></textarea>
             <label>Output: <input readonly class="input-result" name="result" /></label>
           </div>
 
@@ -37,10 +37,10 @@
           <div class="usage">
             <div>
               Randomize float value between
-              <input type="number" class="inline-input input-size-3" name="min" value="-20" />and
+              <input type="number" class="inline-input input-size-3" name="min" value="-20" /> and
               <input type="number" class="inline-input input-size-3" name="max" value="20" />
             </div>
-            <textarea readonly rows="1" name="code"></textarea>
+            <textarea readonly rows="1" class="code" name="code"></textarea>
             <label>Output: <input readonly class="input-result" name="result" /></label>
           </div>
 
@@ -53,7 +53,7 @@
         <form id="frmRandomItem">
           <div class="usage">
             <div>Randomize item from array of animals</div>
-            <textarea readonly rows="1" name="code"></textarea>
+            <textarea readonly rows="1" class="code" name="code"></textarea>
             <label>Output: <input readonly class="input-result" name="result" /></label>
           </div>
           <button type="submit" class="btn-go no-flex">Go</button>
@@ -65,7 +65,7 @@
         <form id="frmShuffle">
           <div class="usage">
             <div>Shuffle the order of an array</div>
-            <textarea readonly rows="1" name="code"></textarea>
+            <textarea readonly rows="1" class="code" name="code"></textarea>
             <label>Output: <input readonly class="input-result" name="result" /></label>
           </div>
           <button type="submit" class="btn-go no-flex">Go</button>
@@ -73,20 +73,20 @@
       </section>
 
       <section>
-        <h2>Shuffle string</h2>
+        <h2>Random string</h2>
         <form id="frmString">
           <div class="usage">
             <div>
               Randomize a string of length
               <input type="number" class="inline-input input-size-3" name="strLength" min="1" max="50" value="10" />
             </div>
-            <div>
+            <div class="checkbox-list mt-2">
               <label><input type="checkbox" name="uppercase" checked />A-Z</label>
               <label><input type="checkbox" name="lowercase" checked />a-z</label>
               <label><input type="checkbox" name="numbers" checked />0-9</label>
               <label><input type="checkbox" name="specials" checked />&*-%$...</label>
             </div>
-            <textarea readonly rows="5" name="code"></textarea>
+            <textarea readonly rows="5" class="code" name="code"></textarea>
             <label>Output: <input readonly class="input-result" name="result" /></label>
           </div>
           <button type="submit" class="btn-go no-flex">Go</button>

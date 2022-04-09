@@ -1,13 +1,30 @@
+// Variables
+
+:root {
+  --accent-300: #d6a7be;
+  --accent-400: #bf8ba4;
+  --accent-500: #ad7691;
+  --accent-600: #936079;
+  --primary-100: #d8e3f1;
+  --primary-200: #c5d4e5;
+  --primary-300: #a3b9d1;
+  --primary-600: #4d7691;
+}
+
 // Reset
 
 input {
   font: inherit;
+  accent-color: var(--accent-500);
 }
 
 // Utils
 
 .no-flex {
   flex: 0 0 auto;
+}
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 // Layout
@@ -42,13 +59,13 @@ h2 {
   font-weight: normal;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-bottom: 0.5em;
-  color: rgb(52, 78, 116);
+  color: var(--primary-600);
 }
 
 .usage {
   flex: 1 1 auto;
   padding: 1em;
-  background-color: #d8e9ee;
+  background-color: var(--primary-200);
   color: #444;
   border-radius: 1em;
   display: flex;
@@ -57,7 +74,8 @@ h2 {
 
 .inline-input {
   font: inherit;
-  background-color: #b3c9d7;
+  background-color: var(--accent-500);
+  color: white;
   padding: 3px;
   border: none;
   border-radius: 4px;
@@ -71,29 +89,32 @@ h2 {
   }
 }
 
-/*
-input[name='result'] {
-  padding: 0.5em;
-  background-color: #ddd;
-  border: 0;
-  font-size: 1.5em;
-  width: 5em;
+.checkbox-list {
+  display: flex;
+  gap: 1em;
+  label {
+    display: flex;
+    gap: 0.3em;
+    input[type='checkbox'] {
+      width: 1em;
+      height: 1em;
+    }
+  }
 }
-*/
 
 label {
   text-align: right;
 }
 
 .input-result {
-  background-color: #fff9;
+  background-color: var(--primary-100);
   border: none;
   padding: 0.5em;
   margin-block-start: 1em;
   border-radius: 0.5em;
 }
 
-textarea[name='code'] {
+.code {
   box-sizing: border-box;
   width: 100%;
   background-color: #fff;
@@ -110,7 +131,7 @@ textarea[name='code'] {
 .btn-go {
   cursor: pointer;
   padding: 0.5em;
-  background-color: #4d7691;
+  background-color: var(--accent-500);
   color: white;
   border: 0;
   font-size: 1.5em;
@@ -121,9 +142,9 @@ textarea[name='code'] {
 
   &:hover,
   &:focus-visible {
-    background-color: #6288a1;
+    background-color: var(--accent-600);
   }
   &:active {
-    background-color: #7ca0b8;
+    background-color: var(--accent-400);
   }
 }
