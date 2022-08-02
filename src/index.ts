@@ -118,12 +118,13 @@ export class Slumpa {
     let currentIndex = array.length
     let randomIndex: number
 
+    const shuffledArray = [...array]
     while (currentIndex != 0) {
       randomIndex = Math.floor(this.#mulberry32() * currentIndex)
       currentIndex--
-      ;[array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]]
+      ;[shuffledArray[currentIndex], shuffledArray[randomIndex]] = [shuffledArray[randomIndex], shuffledArray[currentIndex]]
     }
-    return array
+    return shuffledArray
   }
 
   #mulberry32() {

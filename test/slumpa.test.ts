@@ -57,4 +57,26 @@ describe('Slumpa', () => {
       expect(shuffled).to.eql(expectedOutput)
     })
   })
+
+  context('Items', () => {
+    it('should return correct number of random items', () => {
+      const s = new Slumpa(8)
+      const inputArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+      const expectedArray = ['I', 'F', 'A']
+
+      const items = s.items(3, inputArray)
+      expect(items).to.have.length(3)
+      expect(items).to.eql(expectedArray)
+    })
+
+    it('should not shuffle the input array', () => {
+      const s = new Slumpa(8)
+      const inputArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+      const expectedArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']
+
+      s.items(3, inputArray)
+
+      expect(inputArray).to.eql(expectedArray)
+    })
+  })
 })
