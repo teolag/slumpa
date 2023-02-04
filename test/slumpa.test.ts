@@ -39,6 +39,26 @@ describe('Slumpa', () => {
     })
   })
 
+  context('Float', () => {
+    it('should return same float every time with same seed', () => {
+      const s = new Slumpa(985)
+      expect(s.float(100, 200)).to.equal(100.39898133836687)
+      expect(s.float(100, 200)).to.equal(199.14964502677321)
+      expect(s.float(100, 200)).to.equal(121.57074739225209)
+    })
+
+    it('should not produce floats below min or abouve max', () => {
+      const s = new Slumpa(985)
+      const min = -2
+      const max = -1
+      for (let i = 0; i < 1000; i++) {
+        const float = s.float(min, max)
+        expect(float).to.not.be.lessThan(min)
+        expect(float).to.not.be.greaterThan(max)
+      }
+    })
+  })
+
   context('Integers', () => {
     it('should produce an array of expected integers with same seed', () => {
       const s = new Slumpa(234)

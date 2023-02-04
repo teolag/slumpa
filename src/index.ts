@@ -36,10 +36,10 @@ export class Slumpa {
   }
 
   public float(min = 0, max = 1): number {
-    return this.#mulberry32() * (max - min + 1) + min
+    return this.#mulberry32() * (max - min) + min
   }
   public floats(quantity: number, min = 0, max = 1): number[] {
-    return Slumpa.#setOf(quantity, this.integer.bind(this), min, max)
+    return Slumpa.#setOf(quantity, this.float.bind(this), min, max)
   }
 
   public item<T>(items: T[]): T {

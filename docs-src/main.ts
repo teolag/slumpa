@@ -9,8 +9,8 @@ onFormSubmit('frmRandomInt', (form) => {
 })
 
 onFormSubmit('frmRandomFloat', (form) => {
-  const min = parseInt(form.min.value)
-  const max = parseInt(form.max.value)
+  const min = parseFloat(form.min.value)
+  const max = parseFloat(form.max.value)
   form.result.value = s.float(min, max)
   form.code.value = `const float = slumpa.float(${min}, ${max})`
 })
