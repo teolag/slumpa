@@ -1,6 +1,6 @@
 {
   "name": "slumpa",
-  "version": "0.5.1",
+  "version": "0.6.0",
   "description": "A small randomizing library. Uses a seed to generate random ints, floats, arrays and more.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
